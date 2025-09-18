@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel - Colegio MODELO</title>
+  <link rel="stylesheet" href="css/navegacion.css">
+  <script type="module" src="js/auth.js"></script>
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="logo">Colegio MODELO</span>
+    </div>
+    <div class="nav-right">
+      <a href="#" id="navInicio">Inicio</a>
+      <a href="perfil.html" id="navPerfil">Perfil</a>
+      <button id="logoutBtn">Cerrar sesión</button>
+    </div>
+  </nav>
+
+  <!-- Contenido -->
+  <div class="contenido">
+    <h2 id="bienvenida">Bienvenido</h2>
+
+    <!-- Panel de Admin -->
+    <div id="panelAdmin" style="display:none;">
+      <h3>Panel de Administrador</h3>
+      <p>Aquí van las opciones para administrar usuarios y configuraciones globales.</p>
+    </div>
+
+    <!-- Panel de Profesor -->
+    <div id="panelProfesor" style="display:none;">
+      <h3>Panel de Profesor</h3>
+      <p>Aquí puedes gestionar clases, subir materiales y calificaciones.</p>
+    </div>
+  </div>
+</body>
+</html>

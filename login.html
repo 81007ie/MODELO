@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Colegio MODELO</title>
+  <link rel="stylesheet" href="css/colors.css">
+  <script type="module" src="js/auth.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--celeste);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    form {
+      background: var(--blanco);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      width: 380px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    img {
+      margin-bottom: 15px;
+      height: 100px; /* 🔥 Logo más grande */
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--negro);
+    }
+
+    input, button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px;
+      font-size: 14px;
+      border: 1px solid var(--azul-borde);
+      border-radius: 6px;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--rojo);
+      box-shadow: 0 0 5px var(--rojo);
+    }
+
+    button {
+      background: var(--rojo);
+      color: var(--blanco);
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: darkred;
+    }
+
+    .show-pass {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: var(--negro);
+      margin: 5px 0 10px 0;
+      align-self: flex-start;
+    }
+
+    .show-pass input {
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 14px;
+      margin-top: 10px;
+      color: var(--negro);
+    }
+
+    a {
+      color: var(--rojo);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <form id="loginForm">
+    <!-- Logo -->
+    <img src="assets/logo.png" alt="Logo Colegio MODELO">
+
+    <h2>Iniciar sesión</h2>
+
+    <input type="email" id="loginEmail" placeholder="Correo" required>
+    <input type="password" id="loginPassword" placeholder="Contraseña" required>
+
+    <!-- Checkbox para mostrar contraseña -->
+    <label class="show-pass">
+      <input type="checkbox" onclick="togglePassword()"> 
+      <span>Mostrar contraseña</span>
+    </label>
+
+    <button type="submit">Ingresar</button>
+
+    <p>¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+  </form>
+
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById("loginPassword");
+      passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+    }
+  </script>
+
+</body>
+</html>

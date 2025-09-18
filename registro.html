@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro - Colegio MODELO</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url("assets/colegio_back.png") no-repeat center center fixed; /* 👉 cámbialo por tu fondo */      
+      /*background: #f0f4f8;*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    form {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, select, button {
+      margin: 10px 0;
+      padding: 12px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background: #0066cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #004999;
+    }
+
+    .show-pass {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: #555;
+      margin: 5px 0 10px 0;
+    }
+
+    .show-pass input {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <form id="registerForm">
+    <h2>Registro de usuario</h2>
+
+    <input type="text" id="registerNombre" placeholder="Nombre completo" required>
+    <input type="email" id="registerEmail" placeholder="Correo" required>
+    <input type="password" id="registerPassword" placeholder="Contraseña" required>
+
+    <!-- Checkbox para mostrar contraseña -->
+    <label class="show-pass">
+      <input type="checkbox" onclick="togglePassword()"> 
+      <span>Mostrar contraseña</span>
+    </label>
+
+    <select id="registerRol" required>
+      <option value="">Selecciona un rol</option>
+      <option value="admin">Administrador</option>
+      <option value="profesor">Profesor</option>
+    </select>
+
+    <button type="submit">Registrar</button>
+
+    
+  <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+  </form>
+
+  
+
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById("registerPassword");
+      passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+    }
+  </script>
+
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>

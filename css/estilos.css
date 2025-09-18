@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #61a2e4;
+  color: white;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+input, select, button {
+  margin: 5px 0;
+  padding: 8px;
+}
+
+.show-pass {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* espacio entre checkbox y texto */
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0;
+}
+
