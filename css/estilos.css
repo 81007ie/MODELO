@@ -1,40 +1,83 @@
+/* 🌐 Estilos globales */
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-base);
   margin: 20px;
+  background-color: var(--blanco);
+  color: var(--negro);
 }
 
+/* 🏷️ Header genérico */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #61a2e4;
-  color: white;
-  padding: 10px;
+  background: var(--celeste);
+  color: var(--blanco);
+  padding: var(--spacing-md);
 }
 
-nav a {
-  color: white;
-  margin-left: 10px;
+/* 🔗 Enlaces */
+a {
+  color: inherit;
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+/* 📑 Formularios */
 form {
   display: flex;
   flex-direction: column;
   max-width: 300px;
 }
 
-input, select, button {
-  margin: 5px 0;
-  padding: 8px;
+input,
+select,
+button {
+  margin: var(--spacing-sm) 0;
+  padding: var(--spacing-sm);
+  font-family: var(--font-base);
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
+/* 👁️ Mostrar/ocultar contraseña */
 .show-pass {
   display: flex;
   align-items: center;
-  gap: 6px; /* espacio entre checkbox y texto */
+  gap: 6px;
   font-size: 14px;
-  color: #555;
-  margin: 8px 0;
+  color: var(--gris);
+  margin: var(--spacing-sm) 0;
 }
 
+/* 🔘 Botones reutilizables */
+.btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: var(--font-base);
+  transition: background 0.3s;
+}
+
+.btn-primary {
+  background: var(--celeste);
+  color: var(--blanco);
+}
+
+.btn-primary:hover {
+  background: var(--azul-borde);
+}
+
+.btn-danger {
+  background: var(--rojo);
+  color: var(--blanco);
+}
+
+.btn-danger:hover {
+  background: #c62828;
+}
