@@ -3,31 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Perfil - Colegio MODELO</title>
+  <link rel="stylesheet" href="css/colors.css">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-  <header>
-    <img src="assets/logo.png" alt="Logo MODELO" height="50">
-    <button id="logoutBtn">Cerrar sesión</button>
+  <header class="perfil-header">
+    <img src="assets/logo.png" alt="Logo MODELO" class="logo-img">
+    <button id="logoutBtn" class="btn btn-rojo">Cerrar sesión</button>
   </header>
 
   <main>
     <h2 id="bienvenida">Cargando...</h2>
 
     <!-- Panel para Administrador -->
-    <section id="panelAdmin" style="display:none;">
+    <section id="panelAdmin" class="panel oculto">
       <h3>Panel de Administrador</h3>
       <p>Aquí puedes gestionar usuarios y documentos.</p>
     </section>
 
     <!-- Panel para Profesor -->
-    <section id="panelProfesor" style="display:none;">
+    <section id="panelProfesor" class="panel oculto">
       <h3>Panel de Profesor</h3>
       <p>Aquí puedes subir materiales y ver alumnos.</p>
     </section>
 
     <!-- Panel para Alumno -->
-    <section id="panelAlumno" style="display:none;">
+    <section id="panelAlumno" class="panel oculto">
       <h3>Panel de Alumno</h3>
       <p>Aquí puedes ver tus tareas y documentos asignados.</p>
     </section>

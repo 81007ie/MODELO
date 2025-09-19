@@ -1,83 +1,183 @@
-/* 🌐 Estilos globales */
+/* ===== estilos.css ===== */
+@import url("colors.css");
+
+/* ===== Reset básico ===== */
 body {
-  font-family: var(--font-base);
-  margin: 20px;
-  background-color: var(--blanco);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== Fondos ===== */
+.fondo-centro {
+  background: url("../assets/colegio_back.png") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.fondo-simple {
+  background: var(--celeste);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ===== Contenedor principal ===== */
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 30px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ===== Formularios ===== */
+.formulario {
+  background: var(--blanco);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formulario h2 {
+  margin-bottom: 20px;
   color: var(--negro);
 }
 
-/* 🏷️ Header genérico */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--celeste);
-  color: var(--blanco);
-  padding: var(--spacing-md);
+.formulario input,
+.formulario select,
+.formulario button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid var(--azul-borde);
+  border-radius: 6px;
 }
 
-/* 🔗 Enlaces */
-a {
-  color: inherit;
+.formulario input:focus {
+  outline: none;
+  border-color: var(--rojo);
+  box-shadow: 0 0 5px var(--rojo);
+}
+
+.formulario p {
+  font-size: 14px;
+  margin-top: 10px;
+  color: var(--negro);
+}
+
+.formulario a {
+  color: var(--rojo);
   text-decoration: none;
+  font-weight: bold;
 }
 
-a:hover {
+.formulario a:hover {
   text-decoration: underline;
 }
 
-/* 📑 Formularios */
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 300px;
+/* ===== Botones ===== */
+.btn {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  text-align: center;
 }
 
-input,
-select,
-button {
-  margin: var(--spacing-sm) 0;
-  padding: var(--spacing-sm);
-  font-family: var(--font-base);
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.btn-rojo {
+  background: var(--rojo);
+  color: var(--blanco);
 }
 
-/* 👁️ Mostrar/ocultar contraseña */
+.btn-rojo:hover {
+  background: darkred;
+}
+
+.btn-azul {
+  background: var(--azul-borde);
+  color: var(--blanco);
+}
+
+.btn-azul:hover {
+  background: #0077cc;
+}
+
+/* ===== Tarjetas ===== */
+.card {
+  background: #e6f7ff;
+  border: 1px solid #b3e0ff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  background: #cceeff;
+}
+
+/* ===== Mostrar contraseña ===== */
 .show-pass {
   display: flex;
   align-items: center;
   gap: 6px;
   font-size: 14px;
-  color: var(--gris);
-  margin: var(--spacing-sm) 0;
+  color: var(--negro);
+  margin: 5px 0 10px 0;
+  align-self: flex-start;
 }
 
-/* 🔘 Botones reutilizables */
-.btn {
-  padding: var(--spacing-sm) var(--spacing-md);
-  border: none;
-  border-radius: 5px;
+.show-pass input {
   cursor: pointer;
+}
+
+/* ===== Logo ===== */
+.logo {
+  font-size: 24px;
   font-weight: bold;
-  font-family: var(--font-base);
-  transition: background 0.3s;
+  margin-bottom: 20px;
+  color: #0056a3;
 }
 
-.btn-primary {
-  background: var(--celeste);
-  color: var(--blanco);
+.logo-img {
+  margin-bottom: 15px;
+  height: 100px;
 }
 
-.btn-primary:hover {
-  background: var(--azul-borde);
+/* ===== Paneles ===== */
+.panel {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background: #f7f9fa;
 }
 
-.btn-danger {
-  background: var(--rojo);
-  color: var(--blanco);
+.oculto {
+  display: none;
 }
 
-.btn-danger:hover {
-  background: #c62828;
+/* ===== Perfil Header ===== */
+.perfil-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #61a2e4;
+  color: white;
+  padding: 10px;
 }

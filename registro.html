@@ -3,70 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Registro - Colegio MODELO</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: url("assets/colegio_back.png") no-repeat center center fixed; /* 👉 cámbialo por tu fondo */      
-      /*background: #f0f4f8;*/
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #333;
-    }
-
-    form {
-      background: #fff;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      width: 350px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    input, select, button {
-      margin: 10px 0;
-      padding: 12px;
-      font-size: 14px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    button {
-      background: #0066cc;
-      color: white;
-      border: none;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background: #004999;
-    }
-
-    .show-pass {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 14px;
-      color: #555;
-      margin: 5px 0 10px 0;
-    }
-
-    .show-pass input {
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="css/colors.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script type="module" src="js/auth.js"></script>
 </head>
-<body>
-  <form id="registerForm">
+<body class="fondo-centro">
+  <form id="registerForm" class="formulario">
     <h2>Registro de usuario</h2>
 
     <input type="text" id="registerNombre" placeholder="Nombre completo" required>
@@ -85,13 +27,10 @@
       <option value="profesor">Profesor</option>
     </select>
 
-    <button type="submit">Registrar</button>
+    <button type="submit" class="btn btn-azul">Registrar</button>
 
-    
-  <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+    <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
   </form>
-
-  
 
   <script>
     function togglePassword() {
@@ -99,7 +38,5 @@
       passwordInput.type = passwordInput.type === "password" ? "text" : "password";
     }
   </script>
-
-  <script type="module" src="js/auth.js"></script>
 </body>
 </html>

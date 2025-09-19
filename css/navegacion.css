@@ -1,11 +1,11 @@
-/* Barra de navegación */
+/* 📌 Barra de navegación */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #1e3c72;
-  padding: 10px 20px;
-  color: white;
+  background: var(--azul-oscuro);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  color: var(--blanco);
 }
 
 .navbar .logo {
@@ -15,34 +15,20 @@
 
 .navbar .nav-right {
   display: flex;
-  gap: 15px;
+  gap: var(--spacing-md);
   align-items: center;
 }
 
 .navbar a {
-  color: white;
-  text-decoration: none;
+  color: var(--blanco);
   font-size: 14px;
 }
 
-.navbar a:hover {
-  text-decoration: underline;
-}
-
 .navbar button {
-  background: #ff4b5c;
-  border: none;
-  padding: 8px 12px;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
+  composes: btn btn-danger; /* ⚡ si usas PostCSS, si no copia clases */
 }
 
-.navbar button:hover {
-  background: #d93a4a;
-}
-
-/* Contenido */
+/* 📦 Contenido principal */
 .contenido {
-  padding: 20px;
+  padding: var(--spacing-lg);
 }
