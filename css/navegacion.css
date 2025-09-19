@@ -24,9 +24,6 @@
   font-size: 14px;
 }
 
-.navbar button {
-  composes: btn btn-danger; /* ⚡ si usas PostCSS, si no copia clases */
-}
 
 /* 📦 Contenido principal */
 .contenido {
